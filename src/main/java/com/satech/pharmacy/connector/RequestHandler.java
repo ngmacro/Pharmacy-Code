@@ -77,9 +77,10 @@ public class RequestHandler extends IoHandlerAdapter {
             } else {
                 subStart = System.currentTimeMillis();
 
-                // TODO Burada kontol yapılırken istasyonlar sırayla dikkate alınıyor
-                // TODO Eğer bir istasyonda önce bir rota varsa o zaman o değerlendiriliyor.
-                // TODO İstasyonların bitmesi gibi bir olay yok.
+                /* Burada kontol yapılırken istasyonlar sırayla dikkate alınıyor
+                   Eğer bir istasyonda önce bir rota varsa o zaman o değerlendiriliyor.
+                   Önce istasyonların bitmesi gibi bir olay yok.
+                 */
                 SelectedStation selectedStation = PharmacyUtil.findStationReturnCode(scannerId, boxStations);
                 logger.debug("[ProcessInput][Find Station in {}ms]", System.currentTimeMillis() - subStart);
 
@@ -98,9 +99,10 @@ public class RequestHandler extends IoHandlerAdapter {
                     if (selectedStation.getBoxStation() != null) {
                         Station station = PharmacyCache.allStations.get(selectedStation.getBoxStation().getStationId());
 
-                        // Eğer otomatik Tamamlama aktif ise veya İstasyonTipi ERROR veya ROUTE ise istasyonun durumu
+                        // Eğer otomatik Tamamlama aktif ise veya İstasyonTipi ERROR ve ErrorAutoComplateActive ise veya ROUTE ise istasyonun durumu
                         // TAMAMLANDI olarak değiştirilecek
-                        if (PharmacyCache.isStationAutoCompleteActive || (station != null && StationType.ERROR.equals(station.getType()))
+                        if (PharmacyCache.isStationAutoCompleteActive
+                                || (station != null && PharmacyCache.isErrorStationAutoCompleteActive && StationType.ERROR.equals(station.getType()))
                                 || (station != null && StationType.ROUTE.equals(station.getType()))) {
 
                             subStart = System.currentTimeMillis();

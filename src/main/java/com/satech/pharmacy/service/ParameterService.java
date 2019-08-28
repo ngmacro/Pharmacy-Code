@@ -51,48 +51,18 @@ public class ParameterService {
         Parameter prm1 = repository.getByName("STATION_AUTO_COMPLETE");
         PharmacyCache.isStationAutoCompleteActive = Double.valueOf(1).equals(prm1.getNumberValue());
 
+        Parameter prm4 = repository.getByName("ERROR_STATION_AUTO_COMPLETE");
+        PharmacyCache.isErrorStationAutoCompleteActive = Double.valueOf(1).equals(prm4.getNumberValue());
+
         Parameter prm2 = repository.getByName("THROW_EXCEPTION_IF_BOX_EXISTS");
         PharmacyCache.throwExceptionIfBoxExists = Double.valueOf(1).equals(prm2.getNumberValue());
 
         Parameter prm3 = repository.getByName("ADD_ERROR_STATION_BY_DEFAULT");
         PharmacyCache.addErrorStationByDefault = Double.valueOf(1).equals(prm3.getNumberValue());
 
-
     }
 
     private void initScannerMappings() throws JsonProcessingException {
-//        List<ScannerMapping> sc = new ArrayList<>();
-//        ScannerMapping m = new ScannerMapping();
-//        m.setScannerCode("ASD123");
-//        m.setKeepGoingCode(4);
-//        m.setStationMappingList(new ArrayList<>());
-//
-//        List<StationMapping> stm = new ArrayList<>();
-//        StationMapping stm1 = new StationMapping();
-//        stm1.setStationNumber(1);
-//        stm1.setReturnCode(1);
-//
-//        StationMapping stm2 = new StationMapping();
-//        stm2.setStationNumber(1);
-//        stm2.setReturnCode(1);
-//
-//        stm.add(stm1);
-//        stm.add(stm2);
-//
-//        m.setStationMappingList(stm);
-//
-//        ScannerMapping m1 = new ScannerMapping();
-//        m1.setScannerCode("ASD456");
-//        m1.setKeepGoingCode(4);
-//        m1.setStationMappingList(new ArrayList<>());
-//
-//        sc.add(m);
-//        sc.add(m1);
-//
-//        ObjectMapper mapper1 = new ObjectMapper();
-//        String jsonstr = mapper1.writeValueAsString(sc);
-//        System.out.println(jsonstr);
-
         Parameter prm = repository.getByName("SCANNER_MAPPING");
         System.out.println(prm.getStringValue());
         try {

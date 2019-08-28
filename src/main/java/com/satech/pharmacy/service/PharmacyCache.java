@@ -24,5 +24,5 @@ public class PharmacyCache {
 
     public static boolean addErrorStationByDefault = true;
 
-
+    public static boolean isErrorStationAutoCompleteActive = false;
 }
