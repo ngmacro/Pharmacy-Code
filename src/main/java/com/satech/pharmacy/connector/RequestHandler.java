@@ -61,9 +61,12 @@ public class RequestHandler extends IoHandlerAdapter {
         String scannerId = data[0];
         String boxNumber = data[1];
 
-        if (StringUtils.isEmpty(data[0]) || StringUtils.isEmpty(data[1]) || data[1].contains("NoRead")) {
-            logger.warn("[ProcessInput][Wrong Data][Keep Going]");
+        if (StringUtils.isEmpty(data[0]) || StringUtils.isEmpty(data[1])) {
+            logger.warn("[ProcessInput][Empty Data][Keep Going]");
             keepGoing(scannerId);
+        } else if (data[1].contains("NoRead")) {
+            logger.warn("[ProcessInput][Wrong Data][Noread]");
+            keepGoingToNoRead(scannerId);
         } else {
             long subStart = System.currentTimeMillis();
             List<BoxStation> boxStations = boxStationService.getOpenBoxStations(boxNumber);
@@ -120,6 +123,16 @@ public class RequestHandler extends IoHandlerAdapter {
         logger.info("---------------------------------------------------------------------------------");
         System.out.println();
         System.out.println();
+    }
+
+    private void keepGoingToNoRead(String scannerId) throws Exception {
+        if (!StringUtils.isEmpty(scannerId) && PharmacyUtil.getScanner(scannerId) != null) {
+            ScannerMapping scanner = PharmacyUtil.getScanner(scannerId);
+
+            modbusTcpController.sendData(scanner.getNoReadCode() == null ? 5 : scanner.getNoReadCode(),
+                    scanner.getPlcRegisterNo());
+            logger.warn("[ProcessInput][Noread][Kutu İstasyona Geri Yollandı]");
+        }
     }
 
     private void keepGoing(String scannerId) throws Exception {

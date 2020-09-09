@@ -12,6 +12,8 @@ public class ScannerMapping {
 
     private Integer keepGoingCode;
 
+    private Integer noReadCode;
+
     private Integer plcRegisterNo;
 
     private List<StationMapping> stationMappingList;
