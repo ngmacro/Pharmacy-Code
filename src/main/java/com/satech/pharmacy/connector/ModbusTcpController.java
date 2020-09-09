@@ -29,7 +29,19 @@ public class ModbusTcpController {
                     modbusClient.setConnectionTimeout(connTimeout);
                     modbusClient.Connect();
                     logger.debug("[ModbusTcpController][SendData][Modbus Connection : OK ]");
-                    break;
+                    if(modbusClient.isConnected()) {
+                        try {
+                        logger.info("[ModbusTcpController][SendData][ReturnCode: {}][PlcRegisterNo: {}]", returnCode, plcRegisterNo);
+                        modbusClient.WriteSingleRegister(plcRegisterNo, returnCode);
+                        break;
+                        }
+                        catch (Exception e) {
+                        logger.error("[ModbusTcpController][SendData][Modbus Client Exception!]", e);
+                            tryCount++;
+                            Thread.sleep(500);
+                        }
+                    }
+
                 } catch (Exception e) {
                     tryCount++;
                     logger.error("[ModbusTcpController][SendData][Modbus Connection Exception! Deneme başarısız. TryCount: {}]", tryCount);
@@ -46,12 +58,12 @@ public class ModbusTcpController {
             logger.debug("[ModbusTcpController][SendData][Already Connected!]");
         }
 
-        try {
-            logger.info("[ModbusTcpController][SendData][ReturnCode: {}][PlcRegisterNo: {}]", returnCode, plcRegisterNo);
-            modbusClient.WriteSingleRegister(plcRegisterNo, returnCode);
-        } catch (Exception e) {
-            logger.error("[ModbusTcpController][SendData][Modbus Client Exception!]", e);
-        }
+        //try {
+            //logger.info("[ModbusTcpController][SendData][ReturnCode: {}][PlcRegisterNo: {}]", returnCode, plcRegisterNo);
+            //modbusClient.WriteSingleRegister(plcRegisterNo, returnCode);
+        //} catch (Exception e) {
+            //logger.error("[ModbusTcpController][SendData][Modbus Client Exception!]", e);
+        //}
 
         if (modbusClient.isConnected()) {
             modbusClient.Disconnect();
