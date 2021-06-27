@@ -33,6 +33,7 @@ public class ModbusTcpController {
                         try {
                         logger.info("[ModbusTcpController][SendData][ReturnCode: {}][PlcRegisterNo: {}]", returnCode, plcRegisterNo);
                         modbusClient.WriteSingleRegister(plcRegisterNo, returnCode);
+
                         break;
                         }
                         catch (Exception e) {
