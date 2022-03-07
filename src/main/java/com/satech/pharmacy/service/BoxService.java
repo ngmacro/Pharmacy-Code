@@ -1,5 +1,6 @@
 package com.satech.pharmacy.service;
 
+import com.satech.pharmacy.connector.ModbusTcpController;
 import com.satech.pharmacy.exception.BoxExistsException;
 import com.satech.pharmacy.exception.BoxNotFoundException;
 import com.satech.pharmacy.model.Box;
@@ -32,11 +33,14 @@ public class BoxService {
 
     private final StationService stationService;
 
+    private final ModbusTcpController modbusTcpController;
+
     @Autowired
-    public BoxService(BoxRepository boxRepository, BoxStationService boxStationService, StationService stationService) {
+    public BoxService(BoxRepository boxRepository, BoxStationService boxStationService, StationService stationService, ModbusTcpController modbusTcpController) {
         this.boxRepository = boxRepository;
         this.boxStationService = boxStationService;
         this.stationService = stationService;
+        this.modbusTcpController= modbusTcpController;
     }
 
     public void addNewBox(BoxDto boxDto) {
@@ -50,6 +54,16 @@ public class BoxService {
             addBoxStations(boxDto, newBox);
 
             boxRepository.save(newBox);
+            try {
+                modbusTcpController.sendData(1, 15);
+                logger.info("Eşleme bilgisi yollandı");
+            }
+
+            catch(Exception e)
+            {logger.info("Eşleme bilgisi yollanamadı");
+
+            }
+
             logger.info("New Box added with ID:{} | BoxNumber:{} | OrderNumber:{}", newBox.getId(), newBox.getBoxNumber(),
                     newBox.getOrderNumber());
         } else {
@@ -65,6 +79,15 @@ public class BoxService {
 
             addBoxStations(boxDto, box);
             boxRepository.save(box);
+            try {
+                modbusTcpController.sendData(1, 15);
+                logger.info("Eşleme bilgisi yollandı");
+            }
+
+            catch(Exception e)
+            {logger.info("Eşleme bilgisi yollanamadı");
+
+            }
             logger.info("Box updated with ID:{} | BoxNumber:{} | OrderNumber:{}", box.getId(), box.getBoxNumber(),
                     box.getOrderNumber());
         }

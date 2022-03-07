@@ -94,26 +94,29 @@ public class RequestHandler extends IoHandlerAdapter {
                     // Eger bulunamamıs ise 999 hata kodu veya KeepGoing kodu gonderilecek.
                     subStart = System.currentTimeMillis();
                     ScannerMapping scanner = PharmacyUtil.getScanner(scannerId);
-                    modbusTcpController.sendData(selectedStation.getReturnCode(), scanner.getPlcRegisterNo());
-                    logger.info("[ProcessInput][Scanner:{}][Box:{}][ReturnCode:{}][Send Data To PLC in {}ms]", scannerId, boxNumber,
-                            selectedStation.getReturnCode(), (System.currentTimeMillis() - subStart));
+                    boolean modbusSend = modbusTcpController.sendData(selectedStation.getReturnCode(), scanner.getPlcRegisterNo());
+                    if (modbusSend) {
+                        logger.info("[ProcessInput][Scanner:{}][Box:{}][ReturnCode:{}][Send Data To PLC in {}ms]", scannerId, boxNumber,
+                                selectedStation.getReturnCode(), (System.currentTimeMillis() - subStart));
 
-                    // Verilen numara için bir istasyon bulunmuş.
-                    if (selectedStation.getBoxStation() != null) {
-                        Station station = PharmacyCache.allStations.get(selectedStation.getBoxStation().getStationId());
+                        // Verilen numara için bir istasyon bulunmuş.
+                        if (selectedStation.getBoxStation() != null) {
+                            Station station = PharmacyCache.allStations.get(selectedStation.getBoxStation().getStationId());
 
-                        // Eğer otomatik Tamamlama aktif ise veya İstasyonTipi ERROR ve ErrorAutoComplateActive ise veya ROUTE ise istasyonun durumu
-                        // TAMAMLANDI olarak değiştirilecek
-                        if (PharmacyCache.isStationAutoCompleteActive
-                                || (station != null && PharmacyCache.isErrorStationAutoCompleteActive && StationType.ERROR.equals(station.getType()))
-                                || (station != null && StationType.ROUTE.equals(station.getType()))) {
+                            // Eğer otomatik Tamamlama aktif ise veya İstasyonTipi ERROR ve ErrorAutoComplateActive ise veya ROUTE ise istasyonun durumu
+                            // TAMAMLANDI olarak değiştirilecek
+                            if (PharmacyCache.isStationAutoCompleteActive
+                                    || (station != null && PharmacyCache.isErrorStationAutoCompleteActive && StationType.ERROR.equals(station.getType()))
+                                    || (station != null && StationType.ROUTE.equals(station.getType()))) {
+                                if (scannerId.equals("SCN5")) {
+                                    subStart = System.currentTimeMillis();
 
-                            subStart = System.currentTimeMillis();
+                                    selectedStation.getBoxStation().setStatus(StationStatus.DONE);
+                                    boxStationService.save(selectedStation.getBoxStation());
 
-                            selectedStation.getBoxStation().setStatus(StationStatus.DONE);
-                            boxStationService.save(selectedStation.getBoxStation());
-
-                            logger.debug("[ProcessInput][Update Record in {}ms]", System.currentTimeMillis() - subStart);
+                                    logger.debug("[ProcessInput][Update Record in {}ms]", System.currentTimeMillis() - subStart);
+                                }
+                            }
                         }
                     }
                 }

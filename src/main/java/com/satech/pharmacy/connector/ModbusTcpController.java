@@ -20,10 +20,11 @@ public class ModbusTcpController {
     @Value("${satech.plc.connTimeout}")
     private Integer connTimeout;
 
-    public void sendData(int returnCode, int plcRegisterNo) throws Exception {
+    public boolean sendData(int returnCode, int plcRegisterNo) throws Exception {
         ModbusClient modbusClient = new ModbusClient(plcIp, plcPort);
+        int tryCount = 0;
         if (!modbusClient.isConnected()) {
-            int tryCount = 0;
+
             while (true) {
                 try {
                     modbusClient.setConnectionTimeout(connTimeout);
@@ -52,7 +53,7 @@ public class ModbusTcpController {
 
                 if (tryCount > 10) {
                     logger.debug("[ModbusTcpController][SendData][Modbus Connection Exception! 10 Deneme tamamlandı.]");
-                    return;
+                    break;
                 }
             }
         } else {
@@ -70,6 +71,11 @@ public class ModbusTcpController {
             modbusClient.Disconnect();
             Thread.sleep(500);
         }
+
+        if (tryCount > 10)
+        {return  false;}
+        else
+            return true;
     }
 
 }
