@@ -108,7 +108,7 @@ public class RequestHandler extends IoHandlerAdapter {
                             if (PharmacyCache.isStationAutoCompleteActive
                                     || (station != null && PharmacyCache.isErrorStationAutoCompleteActive && StationType.ERROR.equals(station.getType()))
                                     || (station != null && StationType.ROUTE.equals(station.getType()))) {
-                                if (scannerId.equals("SCN5")) {
+                                if (!scannerId.equals("SCN5")) {
                                     subStart = System.currentTimeMillis();
 
                                     selectedStation.getBoxStation().setStatus(StationStatus.DONE);
