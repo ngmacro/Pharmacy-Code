@@ -1,0 +1,86 @@
+2022-04-23 20:40:32.368  INFO 25444 --- [main] com.satech.pharmacy.PharmacyApplication  : Starting PharmacyApplication on TULPAR with PID 25444 (C:\Users\ibrahimyilmaz\Desktop\Github\Pharmacy-Code\target\classes started by ibrahimyilmaz in C:\Users\ibrahimyilmaz\Desktop\Github\Pharmacy-Code)
+2022-04-23 20:40:32.376 DEBUG 25444 --- [main] com.satech.pharmacy.PharmacyApplication  : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2022-04-23 20:40:32.376  INFO 25444 --- [main] com.satech.pharmacy.PharmacyApplication  : No active profile set, falling back to default profiles: default
+2022-04-23 20:40:33.435  INFO 25444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-23 20:40:33.533  INFO 25444 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 90ms. Found 4 repository interfaces.
+2022-04-23 20:40:33.911  INFO 25444 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$728ebc14] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-23 20:40:34.770  INFO 25444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-04-23 20:40:34.800  INFO 25444 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-23 20:40:34.801  INFO 25444 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2022-04-23 20:40:34.811  INFO 25444 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-12.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python39\Scripts\;C:\Python39\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Maven\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\DeltaTau\PowerPMACSim\opt\ppmac\MinGW\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\dotnet\;C:\Users\ibrahimyilmaz\AppData\Local\Microsoft\WindowsApps;C:\Users\ibrahimyilmaz\AppData\Local\GitHubDesktop\bin;C:\Users\ibrahimyilmaz\AppData\Local\Microsoft\WindowsApps;C:\Users\ibrahimyilmaz\.dotnet\tools;C:\Users\ibrahimyilmaz\AppData\Roaming\npm;.]
+2022-04-23 20:40:34.945  INFO 25444 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-23 20:40:34.945  INFO 25444 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2532 ms
+2022-04-23 20:40:35.143  INFO 25444 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-04-23 20:40:35.208  INFO 25444 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2022-04-23 20:40:35.209  INFO 25444 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-04-23 20:40:35.352  INFO 25444 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-04-23 20:40:35.489  INFO 25444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-23 20:40:35.624  INFO 25444 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-23 20:40:35.640  INFO 25444 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2022-04-23 20:40:35.769  INFO 25444 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2022-04-23 20:40:35.780  INFO 25444 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@27e44e9c
+2022-04-23 20:40:36.354  INFO 25444 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-23 20:40:36.761  INFO 25444 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2022-04-23 20:40:37.038  INFO 25444 --- [main] c.s.pharmacy.service.ParameterService    : ----------------------------------------------------------------
+2022-04-23 20:40:37.038  INFO 25444 --- [main] c.s.pharmacy.service.ParameterService    : Scanner Mapping Loaded Seccesfuly
+2022-04-23 20:40:37.039  INFO 25444 --- [main] c.s.pharmacy.service.ParameterService    : ----------------------------------------------------------------
+2022-04-23 20:40:37.282  INFO 25444 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-23 20:40:37.331  WARN 25444 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-23 20:40:37.466  INFO 25444 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-04-23 20:40:37.527  INFO 25444 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-04-23 20:40:37.530  INFO 25444 --- [main] com.satech.pharmacy.PharmacyApplication  : Started PharmacyApplication in 5.545 seconds (JVM running for 5.997)
+2022-04-23 20:42:00.036  INFO 25444 --- [scheduling-1] com.satech.pharmacy.service.BoxService   : [ArchiveCompletedBox][No Completed Box To Archive]
+2022-04-23 20:42:00.037  INFO 25444 --- [scheduling-1] com.satech.pharmacy.service.BoxService   : [ArchiveCompletedBox][Process Ended In 20]
+2022-04-23 20:42:00.037  INFO 25444 --- [scheduling-1] com.satech.pharmacy.service.BoxService   : ---------------------------------------------------------------------------------
+2022-04-23 20:43:28.555  INFO 23864 --- [main] com.satech.pharmacy.PharmacyApplication  : Starting PharmacyApplication on TULPAR with PID 23864 (C:\Users\ibrahimyilmaz\Desktop\Github\Pharmacy-Code\target\classes started by ibrahimyilmaz in C:\Users\ibrahimyilmaz\Desktop\Github\Pharmacy-Code)
+2022-04-23 20:43:28.557 DEBUG 23864 --- [main] com.satech.pharmacy.PharmacyApplication  : Running with Spring Boot v2.1.3.RELEASE, Spring v5.1.5.RELEASE
+2022-04-23 20:43:28.558  INFO 23864 --- [main] com.satech.pharmacy.PharmacyApplication  : No active profile set, falling back to default profiles: default
+2022-04-23 20:43:29.481  INFO 23864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-04-23 20:43:29.593  INFO 23864 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99ms. Found 4 repository interfaces.
+2022-04-23 20:43:30.016  INFO 23864 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7b095dd9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-04-23 20:43:30.823  INFO 23864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-04-23 20:43:30.851  INFO 23864 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-23 20:43:30.851  INFO 23864 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.16]
+2022-04-23 20:43:30.861  INFO 23864 --- [main] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk-12.0.1\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Python39\Scripts\;C:\Python39\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Maven\bin;C:\Program Files\PuTTY\;C:\Program Files\Git\cmd;C:\DeltaTau\PowerPMACSim\opt\ppmac\MinGW\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\dotnet\;C:\Users\ibrahimyilmaz\AppData\Local\Microsoft\WindowsApps;C:\Users\ibrahimyilmaz\AppData\Local\GitHubDesktop\bin;C:\Users\ibrahimyilmaz\AppData\Local\Microsoft\WindowsApps;C:\Users\ibrahimyilmaz\.dotnet\tools;C:\Users\ibrahimyilmaz\AppData\Roaming\npm;.]
+2022-04-23 20:43:31.006  INFO 23864 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-23 20:43:31.006  INFO 23864 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2409 ms
+2022-04-23 20:43:31.205  INFO 23864 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-04-23 20:43:31.277  INFO 23864 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.7.Final}
+2022-04-23 20:43:31.278  INFO 23864 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-04-23 20:43:31.377  INFO 23864 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2022-04-23 20:43:31.501  INFO 23864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-04-23 20:43:31.620  INFO 23864 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-04-23 20:43:31.633  INFO 23864 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2022-04-23 20:43:31.732  INFO 23864 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000421: Disabling contextual LOB creation as hibernate.jdbc.lob.non_contextual_creation is true
+2022-04-23 20:43:31.748  INFO 23864 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@154b8cb6
+2022-04-23 20:43:32.265  INFO 23864 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-23 20:43:32.694  INFO 23864 --- [main] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2022-04-23 20:43:32.958  INFO 23864 --- [main] c.s.pharmacy.service.ParameterService    : ----------------------------------------------------------------
+2022-04-23 20:43:32.959  INFO 23864 --- [main] c.s.pharmacy.service.ParameterService    : Scanner Mapping Loaded Seccesfuly
+2022-04-23 20:43:32.959  INFO 23864 --- [main] c.s.pharmacy.service.ParameterService    : ----------------------------------------------------------------
+2022-04-23 20:43:33.190  INFO 23864 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-04-23 20:43:33.254  WARN 23864 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-23 20:43:33.390  INFO 23864 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-04-23 20:43:33.445  INFO 23864 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-04-23 20:43:33.447  INFO 23864 --- [main] com.satech.pharmacy.PharmacyApplication  : Started PharmacyApplication in 5.232 seconds (JVM running for 5.617)
+2022-04-23 20:45:00.019  INFO 23864 --- [scheduling-1] com.satech.pharmacy.service.BoxService   : [ArchiveCompletedBox][No Completed Box To Archive]
+2022-04-23 20:45:00.020  INFO 23864 --- [scheduling-1] com.satech.pharmacy.service.BoxService   : [ArchiveCompletedBox][Process Ended In 7]
+2022-04-23 20:45:00.020  INFO 23864 --- [scheduling-1] com.satech.pharmacy.service.BoxService   : ---------------------------------------------------------------------------------
+2022-04-23 20:48:00.017  INFO 23864 --- [scheduling-1] com.satech.pharmacy.service.BoxService   : [ArchiveCompletedBox][No Completed Box To Archive]
+2022-04-23 20:48:00.018  INFO 23864 --- [scheduling-1] com.satech.pharmacy.service.BoxService   : [ArchiveCompletedBox][Process Ended In 2]
+2022-04-23 20:48:00.018  INFO 23864 --- [scheduling-1] com.satech.pharmacy.service.BoxService   : ---------------------------------------------------------------------------------
+2022-04-23 20:49:57.429  INFO 23864 --- [pool-3-thread-1] c.s.pharmacy.connector.RequestHandler    : [RequestHandler][MessageReceived: SCN2-011833]
+2022-04-23 20:49:57.440 DEBUG 23864 --- [pool-3-thread-1] c.s.pharmacy.connector.RequestHandler    : [ProcessInput][Get BoxStation with Number in 11ms]
+2022-04-23 20:49:57.441 DEBUG 23864 --- [pool-3-thread-1] c.s.pharmacy.connector.RequestHandler    : [ProcessInput][Box or BoxStation is not found][Keep Going]
+2022-04-23 20:50:18.468 ERROR 23864 --- [pool-3-thread-1] c.s.p.connector.ModbusTcpController      : [ModbusTcpController][SendData][Modbus Connection Exception! Deneme başarısız. TryCount: 1]
+2022-04-23 20:50:40.022 ERROR 23864 --- [pool-3-thread-1] c.s.p.connector.ModbusTcpController      : [ModbusTcpController][SendData][Modbus Connection Exception! Deneme başarısız. TryCount: 2]
+2022-04-23 20:51:00.014  INFO 23864 --- [scheduling-1] com.satech.pharmacy.service.BoxService   : [ArchiveCompletedBox][No Completed Box To Archive]
+2022-04-23 20:51:00.014  INFO 23864 --- [scheduling-1] com.satech.pharmacy.service.BoxService   : [ArchiveCompletedBox][Process Ended In 2]
+2022-04-23 20:51:00.014  INFO 23864 --- [scheduling-1] com.satech.pharmacy.service.BoxService   : ---------------------------------------------------------------------------------
+2022-04-23 20:51:01.576 ERROR 23864 --- [pool-3-thread-1] c.s.p.connector.ModbusTcpController      : [ModbusTcpController][SendData][Modbus Connection Exception! Deneme başarısız. TryCount: 3]
+2022-04-23 20:51:23.117 ERROR 23864 --- [pool-3-thread-1] c.s.p.connector.ModbusTcpController      : [ModbusTcpController][SendData][Modbus Connection Exception! Deneme başarısız. TryCount: 4]
+2022-04-23 20:51:44.684 ERROR 23864 --- [pool-3-thread-1] c.s.p.connector.ModbusTcpController      : [ModbusTcpController][SendData][Modbus Connection Exception! Deneme başarısız. TryCount: 5]

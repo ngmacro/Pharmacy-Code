@@ -51,7 +51,7 @@ public class ModbusTcpController {
                     Thread.sleep(500);
                 }
 
-                if (tryCount > 10) {
+                if (tryCount > 3) {
                     logger.debug("[ModbusTcpController][SendData][Modbus Connection Exception! 10 Deneme tamamlandı.]");
                     break;
                 }
@@ -72,10 +72,7 @@ public class ModbusTcpController {
             Thread.sleep(500);
         }
 
-        if (tryCount > 10)
-        {return  false;}
-        else
-            return true;
+        return tryCount <= 3;
     }
 
 }
