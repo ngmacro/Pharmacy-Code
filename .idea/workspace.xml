@@ -1,19 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d85be0ea-fad5-40f2-9358-25c61e28b25b" name="Default Changelist" comment="Yollama işleminden sonra update yapılacak">
-      <change afterPath="$PROJECT_DIR$/logs/pharmacy.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/pharmacy.log.2021-06-06.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/pharmacy.log.2021-06-07.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/pharmacy.log.2021-06-08.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/pharmacy.log.2021-06-09.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/pharmacy.log.2021-06-10.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs/pharmacy.log.2022-04-05.0.gz" afterDir="false" />
+    <list default="true" id="d85be0ea-fad5-40f2-9358-25c61e28b25b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/satech/pharmacy/connector/ModbusTcpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/satech/pharmacy/connector/ModbusTcpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/satech/pharmacy/connector/ModbusTcpController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/satech/pharmacy/connector/ModbusTcpController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pharmacy-2.0.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/pharmacy-2.0.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/pharmacy-2.0.0.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/pharmacy-2.0.0.jar.original" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -33,11 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/satech/pharmacy/connector/ModbusTcpController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1173">
-              <caret line="73" selection-start-line="73" selection-end-line="73" />
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,7 +46,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/satech/pharmacy/rest/web/controller/BoxController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
@@ -196,6 +185,45 @@
               <item name="pharmacy" type="b2602c69:ProjectViewProjectNode" />
               <item name="Pharmacy-Code" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pharmacy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pharmacy-Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pharmacy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pharmacy-Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pharmacy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pharmacy-Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pharmacy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pharmacy-Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pharmacy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pharmacy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pharmacy-Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pharmacy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Pharmacy-Code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -286,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650735474416</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Yollama işleminden sonra update yapılacak&#10;5. Scanner Silme İşlemi Yapmayacak">
+      <created>1652732886214</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652732886214</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView">
@@ -301,7 +336,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49666667" visible="true" weight="0.25266525" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49666667" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" sideWeight="0.50333333" side_tool="true" weight="0.25266525" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -317,7 +352,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3288889" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3288889" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.3288889" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.3288889" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3288889" />
       <window_info anchor="bottom" id="SVN Repositories" order="11" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -333,7 +368,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="No read Return Code Eklendi" />
     <MESSAGE value="Yollama işleminden sonra update yapılacak" />
-    <option name="LAST_COMMIT_MESSAGE" value="Yollama işleminden sonra update yapılacak" />
+    <MESSAGE value="Yollama işleminden sonra update yapılacak&#10;5. Scanner Silme İşlemi Yapmayacak" />
+    <option name="LAST_COMMIT_MESSAGE" value="Yollama işleminden sonra update yapılacak&#10;5. Scanner Silme İşlemi Yapmayacak" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/gitignore">
@@ -499,16 +535,6 @@
     <entry file="file://$PROJECT_DIR$/target/maven-archiver/pom.properties">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/satech/pharmacy/connector/ModbusTcpController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/satech/pharmacy/connector/RequestHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -576,6 +602,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/satech/pharmacy/connector/ModbusTcpController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
